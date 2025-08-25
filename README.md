@@ -1,12 +1,38 @@
-# React + Vite
+# 📰 News Hunter  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+News Hunter is a **news aggregator web application** that fetches and displays the latest headlines from popular Indian news sources like **The Economic Times, The Hindu, and NDTV**.  
 
-Currently, two official plugins are available:
+It provides a clean and interactive interface where users can quickly browse news, read article summaries, and open full articles in one click.  
+Additionally, it includes a **Notes feature** where users can save personal notes related to news or tasks.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features  
+- ✅ Fetches **real-time news** from multiple sources using the [NewsData.io API](https://newsdata.io/).  
+- ✅ Displays articles grouped by source (Economic Times, The Hindu, NDTV).  
+- ✅ **Interactive Summary Panel** – click a headline to view its details.  
+- ✅ **Notes Section** – save and manage your own notes (stored locally).  
+- ✅ Modern **UI with TailwindCSS**, responsive and mobile-friendly.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack  
+
+### Frontend  
+- React.js  
+- React Router DOM  
+- TailwindCSS  
+
+### Backend  
+- Node.js  
+- Express.js  
+- Axios  
+- CORS  
+
+### API  
+- [NewsData.io](https://newsdata.io/)  
+
+---
+
+## 📂 Project Structure  
+
