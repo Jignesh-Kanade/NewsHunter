@@ -34,5 +34,3 @@ Additionally, it includes a **Notes feature** where users can save personal note
 
 ---
 
-## 📂 Project Structure  
-
