@@ -3,12 +3,21 @@ const axios = require("axios");
 const cors = require("cors");
 require("dotenv").config();
 
+const geminiRoutes = require("./gemini");
+
 const app = express();
+
+// ✅ Middleware
 app.use(cors());
+app.use(express.json()); // <--- Needed for req.body
+app.use(express.urlencoded({ extended: true }));
+
+// ✅ Gemini routes
+app.use("/api/gemini", geminiRoutes);
 
 const NEWS_API_KEY = process.env.NEWSDATA_API_KEY;
 
-// Fetch from Economic Times, The Hindu, NDTV
+// ✅ News routes
 app.get("/news", async (req, res) => {
     try {
         const sources = [
@@ -46,4 +55,3 @@ const PORT = 5000;
 app.listen(PORT, () =>
     console.log(`✅ Server running at http://localhost:${PORT}`)
 );
-

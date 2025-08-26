@@ -1,89 +1,5 @@
-// import { useEffect, useState } from "react";
-
-// export default function NewsHunter() {
-//     const [newsData, setNewsData] = useState({
-//         "The Economic Times": [],
-//         "The Hindu": [],
-//         "NDTV": [],
-//     });
-
-//     useEffect(() => {
-//         async function fetchNews() {
-//             try {
-//                 const response = await fetch("http://localhost:5000/news");
-//                 const data = await response.json();
-
-//                 // Ensure empty array if API fails
-//                 setNewsData({
-//                     "The Economic Times": data["The Economic Times"] || [],
-//                     "The Hindu": data["The Hindu"] || [],
-//                     "NDTV": data["NDTV"] || [],
-//                 });
-//             } catch (err) {
-//                 console.error("Frontend error:", err);
-//             }
-//         }
-//         fetchNews();
-//     }, []);
-
-//     return (
-//         <div className="min-h-screen min-w-screen bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white p-6">
-//             <h1 className="text-4xl font-bold text-center mb-8 tracking-wide text-yellow-400">
-//                 NEWS HUNTER
-//             </h1>
-
-//             <div className="grid md:grid-cols-3 gap-6">
-//                 {Object.keys(newsData).map((paper, idx) => (
-//                     <div
-//                         key={idx}
-//                         className="bg-gray-800 rounded-2xl shadow-xl border border-gray-700 hover:shadow-2xl transition-all"
-//                     >
-//                         <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-t-2xl p-3">
-//                             <h2 className="text-xl font-semibold text-center">{paper}</h2>
-//                         </div>
-
-//                         <div className="h-64 overflow-y-auto p-4 space-y-3">
-//                             {Array.isArray(newsData[paper]) && newsData[paper].length > 0 ? (
-//                                 newsData[paper].map((article, i) => (
-//                                     <a
-//                                         key={i}
-//                                         href={article.link}
-//                                         target="_blank"
-//                                         rel="noopener noreferrer"
-//                                         className="block bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition cursor-pointer text-sm"
-//                                     >
-//                                         • {article.title}
-//                                     </a>
-//                                 ))
-//                             ) : (
-//                                 <p className="text-gray-400 text-sm italic">
-//                                     No headlines found
-//                                 </p>
-//                             )}
-//                         </div>
-//                     </div>
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function NewsHunter() {
     const [newsData, setNewsData] = useState({
@@ -92,11 +8,12 @@ export default function NewsHunter() {
         "NDTV": [],
     });
     const [selectedArticle, setSelectedArticle] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchNews() {
             try {
-                const response = await fetch("http://localhost:5000/news");
+                const response = await fetch("http://192.168.1.6:5000/news");
                 const data = await response.json();
 
                 setNewsData({
@@ -111,6 +28,10 @@ export default function NewsHunter() {
         fetchNews();
     }, []);
 
+    const goToChat = () => {
+        navigate("/chat", { state: { article: selectedArticle } });
+    };
+
     return (
         <div className="min-h-screen min-w-screen bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white p-6">
             <h1 className="text-4xl font-bold text-center mb-8 tracking-wide text-yellow-400">
@@ -121,7 +42,6 @@ export default function NewsHunter() {
                     Go to Notes
                 </button>
             </Link>
-
 
             <div className="grid md:grid-cols-3 gap-6">
                 {Object.keys(newsData).map((paper, idx) => (
@@ -180,6 +100,13 @@ export default function NewsHunter() {
                         >
                             Read Full Article →
                         </a>
+
+                        <button
+                            onClick={goToChat}
+                            className="mb-5 ml-4 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                        >
+                            Chat with AI
+                        </button>
                     </div>
                 </div>
             )}
