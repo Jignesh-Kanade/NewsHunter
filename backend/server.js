@@ -52,6 +52,7 @@ app.get("/news", async (req, res) => {
 });
 
 const PORT = 5000;
-app.listen(PORT, () =>
+const HOST = "192.168.1.4";
+app.listen(PORT, HOST, () =>
     console.log(`✅ Server running at http://localhost:${PORT}`)
 );

@@ -13,7 +13,8 @@ export default function NewsHunter() {
     useEffect(() => {
         async function fetchNews() {
             try {
-                const response = await fetch("http://localhost:5000/news");
+                // const response = await fetch("http://localhost:5000/news");
+                const response = await fetch("http://192.168.1.4:5000/news");
                 const data = await response.json();
 
                 setNewsData({

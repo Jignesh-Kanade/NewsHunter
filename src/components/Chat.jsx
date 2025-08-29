@@ -22,7 +22,8 @@ export default function Chat() {
         setChat((prev) => [...prev, { role: "user", text: message }]);
 
         try {
-            const res = await fetch("http://localhost:5000/api/gemini/chat", {
+            // const res = await fetch("http://localhost:5000/api/gemini/chat", {
+            const res = await fetch("http://192.168.1.4:5000/api/gemini/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
