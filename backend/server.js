@@ -24,6 +24,7 @@ app.get("/news", async (req, res) => {
             { name: "The Economic Times", domain: "economictimes.indiatimes.com" },
             { name: "The Hindu", domain: "thehindu.com" },
             { name: "NDTV", domain: "ndtv.com" },
+            { name: "Times Of India", domain: "timesofindia.indiatimes.com" },
         ];
 
         const requests = sources.map((s) =>
@@ -52,7 +53,7 @@ app.get("/news", async (req, res) => {
 });
 
 const PORT = 5000;
-const HOST = "192.168.1.4";
-app.listen(PORT, HOST, () =>
+// const HOST = "192.168.1.4";
+app.listen(PORT, () =>
     console.log(`✅ Server running at http://localhost:${PORT}`)
 );
