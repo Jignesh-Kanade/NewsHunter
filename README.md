@@ -20,7 +20,8 @@ To solve this problem, I built **NewsHunter**, a web application that aggregates
 This makes news consumption faster, simpler, and more engaging.  
 
 ## 🎥 Project Demo  
-➡️ <video src="./src/assets/Video.mp4" controls width="600"></video>
+![Watch the Demo](./src/assets/Video.mp4)  
+➡️ [Click here to watch the full video](./src/assets/Video.mp4)
 
 ---
 
