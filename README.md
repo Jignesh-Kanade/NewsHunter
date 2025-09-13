@@ -19,8 +19,7 @@ To solve this problem, I built **NewsHunter**, a web application that aggregates
 
 This makes news consumption faster, simpler, and more engaging.  
 
-## 🎥 Project Demo  
-![Watch the Demo](./src/assets/Video.mp4)  
+## 🎥 Project Demo   
 ➡️ [Click here to watch the full video](./src/assets/Video.mp4)
 
 ---
