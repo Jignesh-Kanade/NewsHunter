@@ -7,6 +7,24 @@ Additionally, it includes a **Notes feature** where users can save personal note
 
 ---
 
+## 📌 Problem  
+Staying updated with daily news can be challenging. For example, my father likes to read the news every day, but no single newspaper covers everything. To stay informed, he has to browse through multiple newspapers and websites, which is inefficient and time-consuming.  
+
+## 💡 Solution – NewsHunter  
+To solve this problem, I built **NewsHunter**, a web application that aggregates headlines from India’s top newspapers into a single platform. With NewsHunter, users can:  
+- Read the latest headlines across multiple sources in one place.  
+- Access full articles directly from the news source.  
+- Interact with an integrated **Gemini-powered chatbot** to discuss or analyze the news.  
+- Create and save **personal notes** while browsing.  
+
+This makes news consumption faster, simpler, and more engaging.  
+
+## 🎥 Project Demo  
+![Watch the Demo](./assets/newshunter-demo.gif)  
+➡️ [Click here to watch the full video](./assets/newshunter-demo.mp4)
+
+---
+
 ## 🚀 Features  
 - ✅ Fetches **real-time news** from multiple sources using the [NewsData.io API](https://newsdata.io/).  
 - ✅ Displays articles grouped by source (Economic Times, The Hindu, NDTV).  
