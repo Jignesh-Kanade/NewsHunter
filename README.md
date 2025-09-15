@@ -46,8 +46,5 @@ This makes news consumption faster, simpler, and more engaging.
 - Axios  
 - CORS  
 
-### API  
-- [NewsData.io](https://newsdata.io/)  
-
 ---
 
