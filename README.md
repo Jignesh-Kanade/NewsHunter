@@ -25,8 +25,8 @@ This makes news consumption faster, simpler, and more engaging.
 ---
 
 ## 🚀 Features  
-- ✅ Fetches **real-time news** from multiple sources using the [NewsData.io API](https://newsdata.io/).  
-- ✅ Displays articles grouped by source (Economic Times, The Hindu, NDTV).  
+- ✅ Fetches **real-time news** from multiple sources.  
+- ✅ Displays articles grouped by source (Economic Times, The Hindu, NDTV, Times of India).  
 - ✅ **Interactive Summary Panel** – click a headline to view its details.  
 - ✅ **Notes Section** – save and manage your own notes (stored locally).  
 - ✅ Modern **UI with TailwindCSS**, responsive and mobile-friendly.  
