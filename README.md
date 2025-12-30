@@ -48,3 +48,9 @@ This makes news consumption faster, simpler, and more engaging.
 
 ---
 
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
